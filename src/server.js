@@ -8,8 +8,7 @@ const dev = NODE_ENV === "development";
 
 polka() // You can also use Express
   .use(
-    compression({ threshold: 0 }),
-    dev ? "/" : "/sapper-webpack-gh-pages",
+    dev ? "/" : "sapper-webpack-gh-pages",
     sirv("static", { dev }),
     sapper.middleware()
   )
